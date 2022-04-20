@@ -1,10 +1,10 @@
 import React from "react";
 
-const Cards = ({amountProducts}) => {
+const Cards = ({amountProducts, amountUsers}) => { 
   
   return (
     <>
-      <div className="row">
+      <div className="row justify-content-center">
         <div className="col-md-4 mb-4">
           <div className="card border-left-primary shadow h-100 py-2">
             <div className="card-body">
@@ -34,7 +34,7 @@ const Cards = ({amountProducts}) => {
                     Total de usuarios
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
-                    79
+                    {amountUsers}
                   </div>
                 </div>
                 <div className="col-auto">

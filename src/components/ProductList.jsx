@@ -1,10 +1,9 @@
 import React from "react";
 
 const ProductList = ({ productsDetail,funcionClick,stateFuncion }) => {
-  console.log(productsDetail);
   return (
     <>
-      <div className="row">
+      <div className="row justify-content-center">
         <div className="col-lg-6 mb-4">
           <div className="card shadow mb-4">
             <div className="card-header py-3">
@@ -19,10 +18,13 @@ const ProductList = ({ productsDetail,funcionClick,stateFuncion }) => {
                     return (
                       <>
                           <div key={i++} className="row">
-                            <div className="col-lg-6 mb-4">
+                            <div className="col-lg-12 mb-4">
                               <div className="card bg-dark text-white shadow">
-                                <div className="card-body">{product.model}</div>
-                                <div className="card-body">Quantity: {product.quantity}</div>
+                                <div className="card-body font-weight-bold">{product.model}</div>
+                                <div className="card-body font-weight-bold">Quantity: {product.quantity}</div>
+                                <div className="card-body text-justify">
+                                  {product.description}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -32,7 +34,7 @@ const ProductList = ({ productsDetail,funcionClick,stateFuncion }) => {
                 </>
               }
             </div>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center mb-3">
               <button className="btn btn-success " onClick={funcionClick}> 
               {stateFuncion ? 'Ocultar Productos' : 'Mostrar Productos' }
               </button>
